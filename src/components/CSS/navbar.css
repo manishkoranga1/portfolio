@@ -1,0 +1,69 @@
+.Navbar li a:hover{
+    transform: scale(1.1);
+    color: orange;
+}
+.Navbar h1 a{
+    text-decoration: none;
+}
+
+.Navbar{
+    width: 100%;
+}
+
+.Navbar .nav-btn{
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: orange;
+    visibility: hidden;
+    opacity: 0;
+}
+
+@media (max-width: 1000px) {
+    .Navbar ul{
+        margin-left: 25px;
+    }
+    .Navbar li{
+        margin: 7px;
+        margin-left: 15px;
+    }
+  }
+
+@media (max-width: 768px) {
+    .Navbar ul{
+        display: none;
+    }
+    .Navbar .nav-btn{
+        visibility: visible;
+        opacity: 1 ;
+    }
+
+    .Navbar ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        transition: 1s;
+        transform: translateY(-100vh);
+    }
+
+    .Navbar .responsive_nav{
+        transform: none;
+    }
+
+  }
+@media (max-width: 400px) {
+    .Navbar h1{
+        font-size: 22px;
+    }
+    .Navbar{
+        height: 50px;
+    } 
+  }

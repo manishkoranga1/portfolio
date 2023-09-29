@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Ubuntu:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
+*{
+    margin: 0%;
+    padding: 0%;
+    background: #060505;
+    color: white;
+    /* font-family: sans-serif; */
+    font-family: Nunito, sans-serif;
+    /* border: 2px solid wheat; */
+
+}
+
+.Navbar{
+    width: 99%;
+    height: 70px;
+    border-bottom: 2px solid orange;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    /* justify-content: center; */
+}
+.Navbar h1{
+    margin-left: 6%;
+    padding: 8px;
+}
+.Home{
+    /* border: 5px solid green; */
+    height: 100vh;
+    min-height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Home .Landing{
+    width: 100%;
+    /* border: 2px solid orange; */
+    margin: auto;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.Navbar ul{
+    width: 60%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
+    margin-left: 90px;
+}
+
+.Navbar li{
+    list-style: none;
+    padding: 10px;
+    margin: 7px;
+    margin-left: 50px;
+}
+.Navbar li a{
+    text-decoration: none;
+}
+
+.Landing .Content{
+    width: 600px;
+    height: 420px;
+    /* border: 2px solid green; */
+    margin-left: 10%;
+}
+.Landing .Content .s-heading{
+    margin-top: 60px;
+}
+.Landing .Content .s-headin{
+    padding: 2px;
+}
+.Landing .Content .m-heading{
+    font-size: 3.5rem;
+    padding: 2px;
+    color: #F08000;
+}
+.Landing .Content .description{
+    margin: 5px;
+    font-size: 16px;
+}
+.Landing .Content .social-media a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    /* border: 3px solid orange; */
+    border-radius: 50%;
+    font-size: 32px;
+    color: orange;
+    text-decoration: none;
+    margin: 10px 5px;
+}
+.Landing .Content .social-media a .bx{
+    background: transparent;
+}
+.Landing .Content .social-media a .bx:hover{
+    /* color: #F08000; */
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .Landing .Content{
+        width: 400px;
+        margin-left: 45px;
+    }
+    .Landing .Content .m-heading{
+        font-size: 2.5rem;
+        padding: 2px;
+        color: #F08000;
+    }
+    .Landing .Content .s-headin{
+        font-size: 1.6rem;
+    }
+    .Landing .Content .description{
+        margin: 5px;
+        font-size: 13px;
+    }
+}
+@media (max-width: 480px) {
+    .Landing .Content{
+        width: 90%;
+        margin-left: 20px;
+    }
+    .Landing .Content .m-heading{
+        font-size: 2.2rem;
+    }
+    .Landing .Content .s-headin{
+        font-size: 1.4rem;
+    }
+    .Landing .Content .description{
+        margin: 5px;
+        font-size: 11px;
+    }
+}

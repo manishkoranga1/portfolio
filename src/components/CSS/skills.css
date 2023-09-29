@@ -1,0 +1,290 @@
+
+.skills {
+    width: 100%;
+    /* min-height: 600px; */
+    /* height: 100vh; */
+    /* border: 2px solid white; */
+    display: flex;
+    flex-direction: column;
+}
+.skills .m-container{
+    width: 100%;
+    /* min-height: 550px; */
+    /* height: 85%; */
+    /* border: 2px solid white; */
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.skills .m-container .m-l-container{
+    width: 50%;
+    /* height: 100%; */
+    /* border: 2px solid white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.heading h1{
+    text-decoration: underline;
+    margin-bottom:20px;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 10px;
+
+}
+.skills .m-container .l-container{
+    width: 50%;
+    /* border: 2px solid white; */
+}
+.skills .m-container .l-container .bar{
+    font-size: 23px;
+    margin: 40px 0;
+    /* border: 2px solid white; */
+}
+.skills .m-container .l-container .bar:first-child{
+    margin-top: 0;
+}
+.skills .m-container .l-container .bar:last-child{
+    margin-bottom: 0;
+}
+.skills .m-container .l-container .bar .info{
+    margin-bottom: 5px;
+    /* border: 2px solid green; */
+}
+.skills .m-container .l-container .bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+}
+.skills .m-container .l-container .bar .progress-line{
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+    
+}
+
+.skills .m-container .l-container .bar .progress-line span{
+    height: 100%;
+    background-color: orange;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.skills .m-container .l-container .bar .progress-line.html span{
+    width: 90%;
+}
+.skills .m-container .l-container .bar .progress-line.react span{
+    width: 70%;
+}
+
+
+.skills .m-container .l-container .bar .progress-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+.skills .m-container .l-container .bar .progress-line.html span::after{
+    content: "90%";
+}
+.skills .m-container .l-container .bar .progress-line.react span::after{
+    content: "70%";
+}
+
+.skills .m-container .l-container .bar .progress-line span::before{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    /* border-top-color: white; */
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+@keyframes showText {
+    100%{
+        opacity: 1;
+    }
+}
+
+.skills .m-container .r-container{
+    width: 50%;
+    /* height: 99%; */
+    /* border: 2px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.skills .m-container .r-container .radial-bars{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    /* border: 2px solid yellow; */
+}
+.r-container .radial-bars .radial-bar{
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.r-container .radial-bars .radial-bar svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+.r-container .radial-bars .radial-bar .progress-bar{
+    stroke-width: 10;
+    stroke: white;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar {
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+
+.path{
+    stroke-width: 10;
+    stroke: orange;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path-1{animation: animate-path1 1s 1s linear forwards;}
+.path-2{animation: animate-path2 1s 1s linear forwards;}
+.path-3{animation: animate-path3 1s 1s linear forwards;}
+.path-4{animation: animate-path4 1s 1s linear forwards;}
+
+@keyframes animate-path1 {
+    100%{
+        stroke-dashoffset: 100;
+    }
+}
+@keyframes animate-path2 {
+    100%{
+        stroke-dashoffset: 90;
+    }
+}
+@keyframes animate-path3 {
+    100%{
+        stroke-dashoffset: 80;
+    }
+}
+@keyframes animate-path4 {
+    100%{
+        stroke-dashoffset: 50;
+    }
+}
+
+.radial-bar .percentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.radial-bar .text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    font-size: 22px;
+    font-weight: 500%;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+
+@media (max-width: 1000px) {
+    .skill .heading h1{
+        text-decoration: underline;
+        font-size: 30px;    
+    }
+    .skills .m-container .l-container{
+        width: 80%;
+    }
+}
+
+@media (max-width: 700px) {
+    .skills .m-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .skills .m-container .m-l-container {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .skills .m-container .r-container {
+        margin-top: 30px;
+        width: 90%;
+    }
+}
+@media (max-width: 400px) {
+    .skills .m-container {
+        margin-bottom: 50px;
+    }
+    .heading h1{
+        font-size: 22px;
+    
+    }
+    .radial-bar .text{
+        font-size: 16px;
+    }
+}
+@media (max-width: 325px) {
+    .r-container .radial-bars .radial-bar svg {
+        width: 100px;
+        height: 120px;
+    }
+    .skills .m-container .m-l-container {
+        width: 98%;
+    }
+}
